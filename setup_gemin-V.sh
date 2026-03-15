@@ -249,6 +249,7 @@ install_base_packages() {
         pipewire-jack wireplumber pipewire-alsa pavucontrol 
         btop iotop htop bluez bluez-utils networkmanager 
         wpa_supplicant dhcpcd fastfetch nano vim cargo gcc dolphin pciutils
+        hyprland waybar kitty wofi xdg-desktop-portal-hyprland
     )
     
     install_batch "${base_pkgs[@]}"
