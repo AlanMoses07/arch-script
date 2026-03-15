@@ -238,7 +238,7 @@ install_base_packages() {
     log_info "Installing base packages..."
     
     # Pre-flight check: ensure pacman DB is synchronized
-    pacman -Sy --noconfirm >/dev/null 2>&1 || true
+    pacman -Syu --noconfirm >/dev/null 2>&1 || true
 
     # Core official packages 
     # (Note: 'telegram' is mapped to 'telegram-desktop' in official Arch repos, 
