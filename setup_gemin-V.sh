@@ -179,7 +179,7 @@ install_batch() {
 
     if [[ ${#missing_pkgs[@]} -gt 0 ]]; then
         log_info "Installing packages: ${missing_pkgs[*]}"
-        pacman -S --noconfirm "${missing_pkgs[@]}"
+        pacman -S --needed --noconfirm "${missing_pkgs[@]}"
     fi
 }
 
@@ -238,7 +238,7 @@ install_base_packages() {
     log_info "Installing base packages..."
     
     # Pre-flight check: ensure pacman DB is synchronized
-    pacman -Syu --noconfirm >/dev/null 2>&1 || true
+    pacman -Syu --needed --noconfirm >/dev/null 2>&1 || true
 
     # Core official packages 
     # (Note: 'telegram' is mapped to 'telegram-desktop' in official Arch repos, 
